@@ -24,8 +24,10 @@ class ProductPage(BasePage):
         btn.click()
 
     def should_be_correct_product(self):
-        assert self.browser.find_element(*ProductPageLocators.PRODUCT).text in self.browser.find_element(*ProductPageLocators.PRODUCT_ALLERT).text, "Product is not correct"
+        assert (self.browser.find_element(*ProductPageLocators.PRODUCT).text
+                    == self.browser.find_element(*ProductPageLocators.PRODUCT_ALLERT).text), "Product allert is not correct"
 
     def should_be_correct_price(self):
         assert self.browser.find_element(*ProductPageLocators.PRICE).text in self.browser.find_element(*ProductPageLocators.PRICE_ALLERT).text, "Price is not correct"
         
+   
