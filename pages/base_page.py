@@ -1,16 +1,15 @@
 from selenium.common.exceptions import NoSuchElementException
 import math
 
+
 class BasePage(object):
     def __init__(self, browser, url, timeout=10):
         self.browser = browser
         self.url = url
         self.browser.implicitly_wait(timeout)
 
-
     def open(self):
         self.browser.get(self.url)
-
 
     def is_element_present(self, how, what):
         try:
@@ -32,7 +31,6 @@ class BasePage(object):
         except NoAlertPresentException:
             print("No second alert presented")
             
-
     def solve_quiz(self):
         alert = self.browser.switch_to.alert
         x = alert.text.split(" ")[2]

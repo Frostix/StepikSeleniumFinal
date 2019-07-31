@@ -11,10 +11,9 @@ class ProductPage(BasePage):
         self.add_to_cart()
         self.should_be_correct_product()
         self.should_be_correct_price()
-        
 
     def should_be_login_url(self):
-        assert "login" in self.browser.current_url , "Login is not in URL"
+        assert "login" in self.browser.current_url, "Login is not in URL"
 
     def should_add_to_cart(self):
         assert self.is_element_present(*ProductPageLocators.ADD_BUTTON), "Add to cart button is not presented"
@@ -30,4 +29,3 @@ class ProductPage(BasePage):
     def should_be_correct_price(self):
         assert self.browser.find_element(*ProductPageLocators.PRICE).text in self.browser.find_element(*ProductPageLocators.PRICE_ALLERT).text, "Price is not correct"
         
-   
