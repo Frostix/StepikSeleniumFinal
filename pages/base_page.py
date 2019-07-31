@@ -30,7 +30,7 @@ class BasePage(object):
             alert.accept()
         except NoAlertPresentException:
             print("No second alert presented")
-            
+
     def solve_quiz(self):
         alert = self.browser.switch_to.alert
         x = alert.text.split(" ")[2]
