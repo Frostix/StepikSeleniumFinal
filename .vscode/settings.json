@@ -2,5 +2,5 @@
     "python.pythonPath": "C:\\Users\\test\\Anaconda3\\envs\\Selenium\\python.exe",
     "python.linting.pylintEnabled": true,
     "python.linting.pep8Enabled": false,
-    "python.linting.enabled": true
+    "python.linting.flake8Enabled": true
 }

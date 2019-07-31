@@ -1,6 +1,5 @@
 from .pages.product_page import ProductPage
 import pytest
-import time
 
 
 @pytest.mark.parametrize('link',
